@@ -10,11 +10,11 @@ def main():
     num2list = []
     common = []
 
-    for i in range(number1):
+    for i in range(sqrt(number1)):
         if number1 % (i+1) == 0:
             num1list.append(i+1)
 
-    for i in range(number2):
+    for i in range(sqrt(number2)):
         if number2 % (i+1) == 0:
             num2list.append(i+1)
 
@@ -24,6 +24,9 @@ def main():
                 common.append(r)
 
     print(common)
+
+    # What if they have no common factors?
+
     """Insert code here print common factors of two numbers
 
     Similar to the previous homework, loop up to the square root of the
