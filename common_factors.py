@@ -1,4 +1,4 @@
-from math import sqrt
+from math import sqrt, ceil
 
 
 def main():
@@ -6,18 +6,24 @@ def main():
     number1 = int(input("Enter first integer: "))
     number2 = int(input("Enter second integer: "))
 
+    # Account for negatives
+
     num1list = []
     num2list = []
     common = []
 
-    for i in range(sqrt(number1)):
+    for i in range(ceil(sqrt(number1))):
         if number1 % (i+1) == 0:
             num1list.append(i+1)
+            num1list.append(int(number1 / (i+1)))
 
-    for i in range(sqrt(number2)):
+    for i in range(ceil(sqrt(number2))):
         if number2 % (i+1) == 0:
             num2list.append(i+1)
+            num2list.append(int(number2 / (i+1)))
 
+    num1list = sorted(list(set(num1list)))
+    num2list = sorted(list(set(num2list)))
     for r in num1list:
         for r2 in num2list:
             if r == r2:
