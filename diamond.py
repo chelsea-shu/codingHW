@@ -4,10 +4,10 @@ def main():
 
     if height % 2 != 0:
         top = int(height / 2)
-        Totstars = height
+        total_stars = height
     else:
         top = int((height - 1)/2)
-        totStars = height - 1
+        total_stars = height - 1
 
     temp = top
     stars = 1
@@ -22,12 +22,12 @@ def main():
         stars += 2
 
     if height % 2 != 0:
-        for mid in range(totStars):
+        for mid in range(total_stars):
             print("*", end="")
         print()
     else:
         for r in range(2):
-            for mid in range(totStars):
+            for mid in range(total_stars):
                 print("*", end="")
             print()
 
