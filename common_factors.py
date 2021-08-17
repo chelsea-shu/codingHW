@@ -22,8 +22,8 @@ def main():
             num2list.append(i+1)
             num2list.append(int(number2 / (i+1)))
 
-    num1list = sorted(list(set(num1list)))
-    num2list = sorted(list(set(num2list)))
+    num1list = sorted(set(num1list))
+    num2list = sorted(set(num2list))
     for r in num1list:
         for r2 in num2list:
             if r == r2:
