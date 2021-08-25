@@ -28,7 +28,8 @@ def parse_score_file(filename):
 
 def main():
 
-    headers, score_data = parse_score_file('fixed_docking_score.sc')
+    headers, score_data = parse_score_file('docking_score.sc')
+    print(headers, score_data)
 
     """Insert code here to analyze score file
 
