@@ -56,16 +56,15 @@ def main():
 
             # Try if the requested number is within bounds, returns true or false
             try:
-                assert 0 <= index <= 1000000
+                print(random_list[index])
 
             # When the try statement returns false, you deal with an assertion error, the except statement lets
             # you try again
-            except AssertionError:
+            except IndexError:
                 print('That index is out of bounds')
 
             # When try statement returns true, you can print out the desired number and break the loop
             else:
-                print(random_list[index])
                 break
 
         finally:
