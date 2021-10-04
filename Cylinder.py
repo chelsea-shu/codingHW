@@ -11,7 +11,7 @@ class Cylinder:
         a height. If not specified, both should default to 1.
 
     """
-    def __init__(self, radius, height):
+    def __init__(self, radius=1, height=1):
         self.radius = radius
         self.height = height
 
@@ -20,10 +20,10 @@ class Cylinder:
         eg: get_radius(self) or getRadius(self)
     """
     def get_radius(self):
-        print('the radius of the cylinder is ' + str(self.radius))
+        return self.radius
 
     def get_height(self):
-        print('the height of the cylinder is ' + str(self.height))
+        return self.height
 
     """
     4.  a mutator function to change the radius, and one for the height.
