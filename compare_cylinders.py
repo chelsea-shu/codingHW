@@ -3,26 +3,24 @@ import argparse
 
 def main():
     parser = argparse.ArgumentParser(description='Comparing two cylinders')
-    parser.add_argument('-r', '--radius', nargs='*', type=float, help='What radii are you using?')
-    parser.add_argument('-hi', '--height', nargs='*', type=float, help='What heights are you using?')
+    parser.add_argument('-r', '--radius', type=float, help='What radii are you using?')
+    parser.add_argument('-hi', '--height', type=float, help='What heights are you using?')
     args = parser.parse_args()
 
     cylinder_radii = args.radius
     cylinder_heights = args.height
 
     # Setting the original cylinder and calculating its tsa and csa ** Right now it's saying I can't print
-    cyl1 = Cylinder(cylinder_radii[0], cylinder_heights[0])
+    cyl1 = Cylinder(cylinder_radii, cylinder_heights)
     cyl1_csa = cyl1.get_curved_surface_area()
     cyl1_tsa = cyl1.get_total_sa()
-    # print('The base surface area of the first cylinder is ' + str(cyl1_csa()))
-    # print('The total surface area of the first cylinder is ' + str(cyl1_tsa()))
-
-    # Calculating the tsa and csa of the new cylinder
-    cyl2 = Cylinder(cylinder_radii[1], cylinder_heights[1])
-    cyl2_csa = cyl2.get_curved_surface_area()
-    cyl2_tsa = cyl2.get_total_sa()
 
     # Comparing the sizes of the two cylinders
+    cyl1.set_radius(3)
+    cyl1.set_height(4)
+    cyl2_csa = cyl1.get_curved_surface_area()
+    cyl2_tsa = cyl1.get_total_sa()
+
     if cyl1_csa > cyl2_csa:
         print('The curved surface area of cylinder 1 is greater than cylinder 2')
     else:
@@ -47,6 +45,8 @@ def main():
 
     Now compare which of the two has more curved surface area and which
     one has more total surface area.
+    
+    You need to use the set function
 
     """
 
