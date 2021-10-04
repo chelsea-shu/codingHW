@@ -1,0 +1,21 @@
+The instructions for each homework are provided in place. We will be programming in Python 3.5 or 3.6.
+Yet again we will enforce PEP8 coding conventions. There is a data file, 3m1z_SymDock_score.sc in this folder.
+
+Since you will be required to write functions, please be sure to include multi-line descriptions of the function,
+specifically what the input parameters are, what the output will be and what the function does.
+Here's a link to help: https://www.python.org/dev/peps/pep-0257/#multi-line-docstrings
+
+Also, it would be nice to start including author information at the start of your files.
+For example, my files would have something like:
+__author__ = "Shourya S. Roy Burman"
+__email__  = "ssrb@jhu.edu"
+This comes before your import statements.
+
+This homework set covers class deifnitions, importing/using custom classes, exception handling and basic matplotlib plotting.
+The recommended order for doing it is:
+1. Cylinder.py
+2. compare_cylinders.py
+3. randint_list.py
+4. plot_score_vs_rmsd.py
+
+Hope you have fun doing them!
