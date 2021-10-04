@@ -1,20 +1,31 @@
 import argparse
 
 def counter(start, end, inc):
-    while start <= end:
-        print(start)
-        start += inc
+    list = []
+
+    if start < end:
+        while start < end:
+            list.append(start)
+            start += inc
+    else:
+        while start > end:
+            list.append(start)
+            start += inc
+
+    print(", ".join(str(ii) for ii in list))
 
 
 def main():
     parser = argparse.ArgumentParser(description='What is the starting number?')
     parser.add_argument('-s', '--start', type=float,
                         help='What is the file you are looking for?')
-    parser.add_argument('-e', '--end', type=float,
-                        default=1.0, help='What is the ending number?')
+    parser.add_argument('-e', '--end', type=float, help='What is the ending number?')
     parser.add_argument('-i', '--increment', type=float, default=1.0,
                         help='What increments do you want to count by?')
     args = parser.parse_args()
+
+    if args.end is None:
+        args.end = args.start
 
     counter(args.start, args.end, args.increment)
 
